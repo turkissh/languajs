@@ -1,0 +1,12 @@
+var texts = {
+    "EN":[
+            {
+                "id": "text"
+            }
+    ],
+    "ES":[
+            {
+                "id" : "text"
+            }
+    ]
+};

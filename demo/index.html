@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Langua.js</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+	 <script type="text/javascript" src="../textsDemo.json"></script>
+	 <script type="text/javascript" src="../langua.js"></script>
+
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a onclick="changeLang('ES')" >ES</a></li>
+			<li><a onclick="changeLang('EN')" >EN</a></li>
+		</ul>
+	</nav>
+
+	<h1 id="title" class="translatable">Bienvenido</h1>
+	<p id="text" class="translatable">Esto es langua.js una libreria para traducir paginas webs</p>
+	<ol>
+		<li id="firstBullet" class="translatable">Primer elemento</li>
+		<li id="secondBullet" class="translatable">Segundo elemento</li>
+	</ol>
+</body>
+</html>

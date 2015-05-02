@@ -1,0 +1,30 @@
+var texts = {
+    "EN":[
+            {
+                "title": "Welcome"
+            },
+            {
+                "text": "This is langua.js, a library for translate webpages"
+            },
+            {
+                "firstBullet": "First element"
+            },
+            {
+                "secondBullet": "Second element"
+            }
+    ],
+    "ES":[
+            {
+                "title" : "Bienvenido"
+            },
+            {
+                "text" : "Esto es langua.js una libreria para traducir paginas webs"
+            },
+            {
+                "firstBullet": "Primer elemento"
+            },
+            {
+                "secondBullet": "Segundo elemento"
+            }
+    ]
+};
