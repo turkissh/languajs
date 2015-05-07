@@ -40,10 +40,18 @@ Usage:
 
 Pending:
         (*) Create a js that dinamically create the texts.json
-        (*) ADD to api modify specifics texts
         (*) ADD to api the modification of placeholders in inputs
         (*) Create a more complete demo
 
+
+Methods:
+
+    changeLang(language) - Changes the language of the entery page to the one passed as parameter
+                            eg: changeLang("ES");
+
+    changeFieldText(field,lang) - Changes a specific field to the language passed as parameters. Objects
+                                    must be a JQuery object
+                                    eg: changeFieldText( $("#title") , "EN" );
 
 For more information, check the demo!
 
