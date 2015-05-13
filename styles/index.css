@@ -7,6 +7,10 @@ body{
 	font-weight: 200;
 }
 
+.pointer{
+	cursor: pointer;
+}
+
 .margined-top{
 	margin-top: 5%;
 }
