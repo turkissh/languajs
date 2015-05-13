@@ -42,6 +42,13 @@ body{
 	font-size: 3em;
 }
 
+.img-responsive{
+	height: 30px;
+	width: 30px;
+}
+
+
+/*Colors*/
 .ft-white{
 	color:white;
 }
