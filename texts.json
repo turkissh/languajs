@@ -1,0 +1,114 @@
+var texts = {
+    "EN":[
+            {
+                "languaDesc": "THE JAVASCRIPT LIBRARY TO EASILY TRANSLATE WEBSITES."
+            },
+            {
+                "downloadBtn": "Download v1.0"
+            },
+            {
+                "implementing": "Implementing? Easy as pie"
+            },
+            {
+                "imp1Header": "Start with the basics"
+            },
+            {
+                "imp1Text": "Import Jquery, texts and Langua"
+            },
+            {
+                "imp2Header": "Add a class"
+            },
+            {
+                "imp2Text": "As natural as it sounds, add the class 'translatable' to the text you want to select as translatable"
+            },
+            {
+                "imp3Header": "Identify your text"
+            },
+            {
+                "imp3Text": "Add a unique identifier to your texts"
+            },
+            {
+                "imp4Header": "Save your texts"
+            },
+            {
+                "imp4Text": "Use the texts.json file to write all your texts in all the languages needed"
+            },
+            {
+                "imp5Header": "Translate your page!"
+            },
+            {
+                "imp5Text": "Call the function changeLang(lang), where lang is the language code (ES,EN, etc)"
+            },
+            {
+                "imp6Header": "Translate only one field?"
+            },
+            {
+                "imp6Text": "As we said, easy as pie, call changeFieldText with the object to modify and the language code"
+            },
+            {
+                "doubts": "You still have doubts?"
+            },
+            {
+                "demoBtn": "Check our demo!"
+            },
+            {
+                "contact": "Any idea? Bugs? Features?"
+            }
+    ],
+    "ES":[
+            {
+                "languaDesc" : "LA LIBRERIA JAVASCRIPT PARA TRADUCIR PAGINAS FACILMENTE."
+            },
+            {
+                "downloadBtn": "Descarga v1.0"
+            },
+            {
+                "implementing": "Implementarlo? Muy simple"
+            },
+            {
+                "imp1Header": "Empieza con lo basico"
+            },
+            {
+                "imp1Text": "Importa JQuery, los textos y Langua"
+            },
+            {
+                "imp2Header": "Importa la clase"
+            },
+            {
+                "imp2Text": "Natural como suena, agrega la clase 'translatable' al texto que quieras traducir"
+            },
+            {
+                "imp3Header": "Identifica el text"
+            },
+            {
+                "imp3Text": "Agrega un identificador unico a los textos"
+            },
+            {
+                "imp4Header": "Guarda tus textos"
+            },
+            {
+                "imp4Text": "Usa texts.json para guardar los textos en todos los lenguajes necesarios"
+            },
+            {
+                "imp5Header": "Traduce tu pagina!"
+            },
+            {
+                "imp5Text": "LLama a la funcion changeLang(lang), donde lang es el codigo de lengauje(ES,EN,etc)"
+            },
+            {
+                "imp6Header": "Traducir un solo campo?"
+            },
+            {
+                "imp6Text": "Como dijimos, simple, llama changeFieldText con el objeto a modificar y el codigo de lenguaje"
+            },
+            {
+                "doubts": "Todavia tienes dudas?"
+            },
+            {
+                "demoBtn": "Prueba la demo!"
+            },
+            {
+                "contact": "Alguna idea? Error? Mejora?"
+            }
+    ]
+};

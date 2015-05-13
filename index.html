@@ -1,1 +1,179 @@
-<h1>Languajs</h1>
+<!DOCTYPE html>
+    <head>
+    	<title>Langua.js</title>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="author" content="TurKiSsh">
+		<meta name="description" content="The javascript library to translate webpages easily">
+		<meta name="keywords" content="languajs">
+
+
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="styles/prism.css">
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="styles/animate.css">
+		<link rel="stylesheet" type="text/css" href="styles/index.css">
+        
+        <!-- Scripts -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/prism.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="texts.json"></script>
+		<script type="text/javascript" src="js/langua.js.min.js"></script>
+    </head>
+    <body>
+
+    	<nav class="navbar navbar-default navbar-fixed-top">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <ul class="nav navbar-nav navbar-right">
+        		<li><a onclick="changeLang('ES')">ES</a></li>
+        		<li><a onclick="changeLang('EN')">EN</a></li>
+		    </div>
+		  </div>
+		</nav>
+       
+		<div class="container-fluid margined-top">
+
+			<div class="row">
+				<h1 class="bold ft-bigger">Langua.<span class="thicker">js</span></h1>
+	        	<small id="languaDesc" class="translatable">THE JAVASCRIPT LIBRARY TO EASILY TRANSLATE WEBSITES.</small>
+	        </div>
+
+	        <div class="row">
+	        	<a href="https://github.com/turkissh/languajs/archive/master.zip"><button id="downloadBtn" type="button" class="btn btn-danger translatable">Download v1.0</button></a>	        	
+	        </div>
+        
+			<div class="row center-block animated fadeInUp">
+				<iframe src="https://ghbtns.com/github-btn.html?user=turkissh&repo=languajs&type=star&count=true" frameborder="0" scrolling="0" width="80px" height="20px"></iframe>
+				<iframe src="https://ghbtns.com/github-btn.html?user=turkissh&repo=languajs&type=watch&count=false&v=2" frameborder="0" scrolling="0" width="60px" height="20px"></iframe>
+				<iframe src="https://ghbtns.com/github-btn.html?user=turkissh&repo=languajs&type=fork&count=false" frameborder="0" scrolling="0" width="60px" height="20px"></iframe>
+				<iframe src="https://ghbtns.com/github-btn.html?user=turkissh&type=languajs&type=follow&count=false" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+			</div>
+
+		</div>
+
+
+		<div class="container-fluid ft-white bg-blackie margined-top">
+
+			<div class="row">
+				<h3 id="implementing" class="thin translatable">Implementing? Easy as pie</h3>
+			</div>
+
+			<div class="row implement">
+				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+					<h3 id="imp1Header" class="thin translatable">Start with the basics</h3>
+					<p id="imp1Text" class="thin translatable">Import Jquery, texts and Langua</p>
+				</div>
+				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers vert-middle">
+					<code class="language-markup">&ltscript src="jquery.min.js"&gt&lt/script&gt
+					&ltscript type="text/javascript" src="texts.json"&gt&lt/script&gt
+	 				&ltscript type="text/javascript" src="langua.js"&gt&lt/script&gt</code>
+				</pre>
+					
+			</div>
+
+			<div class="row implement">
+				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+					<h3 id="imp2Header" class="thin translatable">Add a class</h3>
+					<p id="imp2Text" class="thin translatable">As natural as it sounds, add the class "translatable" to the text you want to select as translatable</p>
+				</div>
+				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
+					<code class="language-markup">&ltp class="translatable"&gtExample&lt/p&gt</code>
+				</pre>
+					
+			</div>
+
+			<div class="row implement">
+				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+					<h3 id="imp3Header" class="thin translatable">Indentify your text</h3>
+					<p id="imp3Text" class="thin translatable">Add a unique identifier to your texts</p>
+				</div>
+				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
+					<code class="language-markup">&ltp class="translatable" id="text1"&gtExample&lt/p&gt</code>
+				</pre>
+					
+			</div>
+
+			<div class="row implement">
+				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+					<h3 id="imp4Header" class="thin translatable">Save your texts</h3>
+					<p id="imp4Text" class="thin translatable">Use the texts.json file to write all your texts in all the languages needed</p>
+				</div>
+				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
+					<code class="language-markup">var texts = {
+						    "EN":[
+						            {
+						                "text1": "Example"
+						            }
+						    ],
+						    "ES":[
+						            {
+						                "text1" : "Ejemplo"
+						            }
+						    ]
+						};
+					</code>
+				</pre>
+					
+			</div>
+
+			<div class="row implement">
+				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+					<h3 id="imp5Header" class="thin translatable">Translate your page!</h3>
+					<p id="imp5Text" class="thin translatable">Call the function changeLang(lang), where lang is the language code (ES,EN, etc)</p>
+				</div>
+				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
+					<code class="language-markup">&ltli&gt
+						&lta onclick="changeLang('ES')" &gt
+							ES
+						&lt/a&gt
+					&lt/li&gt</code>
+				</pre>
+					
+			</div>
+
+			<div class="row implement">
+				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+					<h3 id="imp6Header" class="thin translatable">Translate only one field?</h3>
+					<p id="imp6Text" class="thin translatable">As we said, easy as pie, call changeFieldText with the object to modify and the language code</p>
+				</div>
+				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
+					<code class="language-markup">&ltli&gt
+						&lta onclick="changeFieldText($('#text1'),'EN')" &gt
+							Text to EN
+						&lt/a&gt
+					&lt/li&gt</code>
+				</pre>
+					
+			</div>
+			
+		</div>
+
+		<div class="container-fluid">
+
+			<div class="row">
+				<h1 id="doubts" class="ft-big thin translatable">You still have doubts?</h1>
+			</div>
+			<div class="row">
+	        	<a href="https://github.com/turkissh/languajs/tree/master/demo" target="_blank"><button id="demoBtn" type="button" class="btn btn-danger translatable">Check our demo!</button></a>	        	
+	        </div>
+
+	        <div class="row">
+				<h1 id="contact" class="ft-big thin translatable">Any idea? Bugs? Features?</h1>
+			</div>
+			<div class="row">
+				<ul class="list-inline">
+					<li><a href="https://www.facebook.com/emilianodipierro" target="_blank"><img class="img-responsive" src="images/facebook.png" alt="facebook"></a></li>
+					<li><a href="https://www.twitter.com/turkissh02" target="_blank"><img class="img-responsive" src="images/twitter.png" alt="twitter"></a></li>
+					<li><a href="https://ar.linkedin.com/in/emilianodipierro" target="_blank"><img class="img-responsive" src="images/linkedin.png" alt="linkedin"></a></li>
+					<li><a href="mailto:emiliano.dipierro@gmail.com?subject=LanguaJs feedback"><img class="img-responsive" src="images/google.png" alt="google"></a></li>
+				</ul>
+			</div>
+		</div>
+
+    </body>
+</html>

@@ -1,0 +1,51 @@
+body{
+	background-color: white;
+	font-family:"Helvetica Neue",Helvetica, Arial, sans-serif;
+	color: black;
+	overflow-x: hidden;
+	text-align: center;
+	font-weight: 200;
+}
+
+.margined-top{
+	margin-top: 5%;
+}
+
+.row{
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.implement{
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+
+.vert-middle{
+	margin-top: 20px;
+  	margin-bottom: 10px;
+}
+
+.thin {
+	font-weight: 100;
+}
+
+.thicker {
+	font-weight: 200;
+}
+
+.ft-bigger{
+	font-size: 6em;
+}
+
+.ft-big{
+	font-size: 3em;
+}
+
+.ft-white{
+	color:white;
+}
+
+.bg-blackie{
+	background-color: #353535;
+}
