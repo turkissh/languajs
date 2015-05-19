@@ -1,5 +1,31 @@
-//Declaring default language
+//Default variables
 var pageLang;
+var defaultKey = "com.github.turkissh.languajs.pageLang"
+
+
+/**
+ *  Public
+ *  Function: Changes the language with the default language
+ */
+ function initChangeLang() {
+
+    $( document ).ready(function(){
+
+      actualLang = getSessionLang();
+
+      if( actualLang == null){
+        //Sets the browser language as default
+         pageLang = getBrowserLang();
+         setSessionLang(pageLang);
+      }else{
+        pageLang = actualLang;
+      }
+
+      changeLang(pageLang);
+
+    });
+ };
+
 
 /**
  *  Public
@@ -10,6 +36,7 @@ var pageLang;
 function changeLang(language) {
 
 	pageLang = language;
+  setSessionLang(pageLang);
 
 	$.each($(".translatable"),function(index,field) {
 		
@@ -85,3 +112,41 @@ function changeLang(language) {
 
   };
 
+/**
+  * Private
+  * Function: Gets browser language
+  */  
+function getBrowserLang() {
+  
+  var userLang = navigator.language || navigator.userLanguage;
+
+  // Check if the li for the browsers language is available
+  // and set active if it is available
+  if(  userLang.split('-')[0]  ) {
+    return ( userLang.split('-')[0].toUpperCase() );
+  }else{
+    //The browser doesn't have a language set, use english 
+    return 'EN';
+  }
+
+};
+
+/**
+  * Private
+  * Function: Get session lang
+  */  
+function getSessionLang() {
+  
+  return sessionStorage.getItem(defaultKey);
+
+};
+
+/**
+  * Private
+  * Function: Set session lang
+  */  
+function setSessionLang(lang) {
+  
+  sessionStorage.setItem(defaultKey,lang);
+
+};
