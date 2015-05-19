@@ -34,16 +34,22 @@ var texts = {
                 "imp4Text": "Use the texts.json file to write all your texts in all the languages needed"
             },
             {
-                "imp5Header": "Translate your page!"
+                "imp5Header": "Initiate your page"
             },
             {
-                "imp5Text": "Call the function changeLang(lang), where lang is the language code (ES,EN, etc)"
+                "imp5Text": "Use the function initChangeLang() in every page of your web to automatically change the language on navigate. It also, the first time, get the default language from the browser."
             },
             {
-                "imp6Header": "Translate only one field?"
+                "imp6Header": "Translate your page!"
             },
             {
-                "imp6Text": "As we said, easy as pie, call changeFieldText with the object to modify and the language code"
+                "imp6Text": "Call the function changeLang(lang), where lang is the language code (ES,EN, etc)"
+            },
+            {
+                "imp7Header": "Translate only one field?"
+            },
+            {
+                "imp7Text": "As we said, easy as pie, call changeFieldText with the object to modify and the language code"
             },
             {
                 "doubts": "You still have doubts?"
@@ -90,16 +96,22 @@ var texts = {
                 "imp4Text": "Usa texts.json para guardar los textos en todos los lenguajes necesarios"
             },
             {
-                "imp5Header": "Traduce tu pagina!"
+                "imp5Header": "Inicializa la pagina"
             },
             {
-                "imp5Text": "Llama a la funcion changeLang(lang), donde lang es el codigo de lengauje(ES,EN,etc)"
+                "imp5Text": "Usa la funcion initChangeLang() en cada pagina de tu web para automaticamente cambiar el lenguaje cuando navegues. Tambien, la primera vez, tomara el lenguaje como default del explorador"
             },
             {
-                "imp6Header": "Traducir un solo campo?"
+                "imp6Header": "Traduce tu pagina!"
             },
             {
-                "imp6Text": "Como dijimos, simple, llama changeFieldText con el objeto a modificar y el codigo de lenguaje"
+                "imp6Text": "Llama a la funcion changeLang(lang), donde lang es el codigo de lengauje(ES,EN,etc)"
+            },
+            {
+                "imp7Header": "Traducir un solo campo?"
+            },
+            {
+                "imp7Text": "Como dijimos, simple, llama changeFieldText con el objeto a modificar y el codigo de lenguaje"
             },
             {
                 "doubts": "Todavia tienes dudas?"

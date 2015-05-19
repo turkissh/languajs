@@ -23,6 +23,9 @@
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="texts.json"></script>
 		<script type="text/javascript" src="js/langua.js.min.js"></script>
+		<script type="text/javascript">
+            initChangeLang();
+		</script>
     </head>
     <body>
 
@@ -123,8 +126,21 @@
 
 			<div class="row implement">
 				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
-					<h3 id="imp5Header" class="thin translatable">Translate your page!</h3>
-					<p id="imp5Text" class="thin translatable">Call the function changeLang(lang), where lang is the language code (ES,EN, etc)</p>
+					<h3 id="imp5Header" class="thin translatable">Initiate your page</h3>
+					<p id="imp5Text" class="thin translatable">Use the function initChangeLang() in every page of your web to automatically change the language on navigate. It also, the first time, get the default language from the browser.</p>
+				</div>
+				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
+					<code class="language-markup">&ltscript&gt
+							initChangeLang();
+					&lt/script&gt</code>
+				</pre>
+					
+			</div>
+
+			<div class="row implement">
+				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
+					<h3 id="imp6Header" class="thin translatable">Translate your page!</h3>
+					<p id="imp6Text" class="thin translatable">Call the function changeLang(lang), where lang is the language code (ES,EN, etc)</p>
 				</div>
 				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
 					<code class="language-markup">&ltli&gt
@@ -138,8 +154,8 @@
 
 			<div class="row implement">
 				<div class="col-md-3 col-md-offset-1 col-lg-3 col-lg-offset-2">
-					<h3 id="imp6Header" class="thin translatable">Translate only one field?</h3>
-					<p id="imp6Text" class="thin translatable">As we said, easy as pie, call changeFieldText with the object to modify and the language code</p>
+					<h3 id="imp7Header" class="thin translatable">Translate only one field?</h3>
+					<p id="imp7Text" class="thin translatable">As we said, easy as pie, call changeFieldText with the object to modify and the language code</p>
 				</div>
 				<pre class="col-md-6 col-md-offset-1 col-lg-4 col-lg-offset-1 line-numbers">
 					<code class="language-markup">&ltli&gt
