@@ -11,6 +11,9 @@ var texts = {
             },
             {
                 "secondBullet": "Second element"
+            },
+            {
+                "emailInput": "Enter you email"
             }
     ],
     "ES":[
@@ -25,6 +28,9 @@ var texts = {
             },
             {
                 "secondBullet": "Segundo elemento"
+            },
+            {
+                "emailInput": "Agrega tu email"
             }
     ]
 };

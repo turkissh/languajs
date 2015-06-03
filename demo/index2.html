@@ -32,16 +32,21 @@
 	<nav class="navbar navbar-default" >
 		<button type="button" class="btn btn-default navbar-btn" onclick="changeLang('ES')">ES</button>
 		<button type="button" class="btn btn-default navbar-btn" onclick="changeLang('EN')">EN</button>
+		<button type="button" class="btn btn-default navbar-btn" onclick="changeLang('PT')">PT</button>
 		<button type="button" class="btn btn-default navbar-btn" onclick="changeFieldText($('#text'),'EN')">Text to EN</button>
 		<a href="index.html"><button type="button" class="btn btn-default navbar-btn">Go to index!</button></a>
-		<h1 class="navbar-text navbar-right">Langua.Js</h1>
+		<h1 class="navbar-text navbar-right">Langua.Js 2/2</h1>
 	</nav>
-	<ul class="text-center list-unstyled">
-		<li id="firstBullet" class="translatable"></li>
-		<li id="secondBullet" class="translatable"></li>		
-	</ul>
-	<hr>
-	<h1 id="title" class="text-center translatable"></h1>
-	<p id="text" class="text-center translatable"></p>
+	<div class="text-center">
+		<ul class="list-unstyled">
+			<li id="firstBullet" class="translatable"></li>
+			<li id="secondBullet" class="translatable"></li>		
+		</ul>
+		<hr>
+		<h1 id="title" class="translatable"></h1>
+		<input id="emailInput" type='text' class="translatable" name='email' placeholder=''>
+		<p id="text" class="translatable"></p>	
+	</div>
+	
 </body>
 </html>

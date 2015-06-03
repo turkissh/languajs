@@ -71,9 +71,13 @@ function changeLang(language) {
 	  	//Valid the id is in the dictionary
 		if(index != null){
 
-			//Assing the text in the object
-			$(field).text(texts[lang][index][$(field).attr("id")]);
-
+			//Check if the object has placeholder or not
+            if( $.inArray( $(field).prop("tagName") , ["INPUT","TEXTAREA"] ) >= 0 ){
+                $(field).attr( "placeholder" , texts[lang][index][$(field).attr("id")] );    
+            }else{
+                $(field).text(texts[lang][index][$(field).attr("id")]);    
+            }
+			
 		}
 
   	}  	
