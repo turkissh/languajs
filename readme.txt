@@ -15,49 +15,5 @@ Description:
 
 Requires:  JQuery
 
-Usage:
-    
-    TEXTS
-        (*) Edit the file texts with the texts you will use in your webpage
-        (*) Follow the syntaxs as:
-                texts 
-                  |  
-                  +--EN
-                      |
-                      +-- id : text
-
-        (*) You can create as many languages as you need following the 
-            same syntax
-        (*) Any doubt, check the demo
-
-    HTML
-        (*) Import the texts object (texts.js)
-        (*) Import the library langua.js
-        (*) Mark the elementes which are translatables given them the 
-            class "translatable"
-        (*) Give them an ID which will be the same you will reference 
-            them in the texts.js
-    JS
-        (*) Call the method changeLang(language) to automatically change 
-            all the page language
-
-
-Pending:
-        (*) Create a js that dinamically create the texts.json
-        (*) ADD to api the modification of placeholders in inputs
-        (*) Create a more complete demo
-
-
-Methods:
-
-    changeLang(language) - Changes the language of the entery page to the 
-                            one passed as parameter
-                            eg: changeLang("ES");
-
-    changeFieldText(field,lang) - Changes a specific field to the language 
-                                    passed as parameters. Objects
-                                    must be a JQuery object
-                                    eg: changeFieldText( $("#title") , "EN" );
-
-For more information, check the demo!
-
+Just go => http://turkissh.github.io/languajs/ and see it working
+Its a demo and we have another waiting for your testing
