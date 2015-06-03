@@ -1,7 +1,9 @@
 //Default variables
 var pageLang;
-var defaultKey = "com.github.turkissh.languajs.pageLang"
+var defaultKey = "com.github.turkissh.languajs.pageLang";
 
+
+//-------Public functions, alias API----------
 
 /**
  *  Public
@@ -11,17 +13,18 @@ var defaultKey = "com.github.turkissh.languajs.pageLang"
 
     $( document ).ready(function(){
 
-      actualLang = getSessionLang();
+        actualLang = getSessionLang();
 
-      if( actualLang == null){
+    if( actualLang == null){
         //Sets the browser language as default
-         pageLang = getBrowserLang();
-         setSessionLang(pageLang);
-      }else{
+        pageLang = getBrowserLang();
+        //Only set the language if exists in file
+        setSessionLang(pageLang); 
+    }else{
         pageLang = actualLang;
-      }
+    }
 
-      changeLang(pageLang);
+        changeLang(pageLang);
 
     });
  };
@@ -35,43 +38,24 @@ var defaultKey = "com.github.turkissh.languajs.pageLang"
  */
 function changeLang(language) {
 
-	pageLang = language;
-  setSessionLang(pageLang);
+    if(langExists(language)){	
 
-	$.each($(".translatable"),function(index,field) {
+        pageLang = language;
+
+        setSessionLang(pageLang);
+
+        $.each($(".translatable"),function(index,field) {
 		
-		changeFieldText(field , pageLang);
+            changeFieldText(field , pageLang);
 
-	});
+    	});
+
+    }else{
+        console.warn("Trying to go to unexisting language [" + language + "]");
+    } 
 	
 };
 
-
-/**
- * Private
- * Function: Finds a specific value in the array of texts and get its index
- * Parameter: Field to find in the texts file, Language to find
- */
- function getTextIndex(field,lang) {
-
- 	var result;
- 	
- 	$.each(texts[lang],function(index,value) {
-
-		if($(field).attr("id") in texts[lang][index]){
-			result = index;
-		}
-
-	});
-
-	if(result == null){
-		console.warn("Id " + $(field).attr("id") + " marked as translatable and there is no key in texts file for " + pageLang);
-		return null;
-	}else{
-		return result;
-	}
-
- };
 
  /**
   * Public
@@ -96,6 +80,18 @@ function changeLang(language) {
 
   };
 
+ /**
+  * Public
+  * Function: Gets the language code
+  */
+  function getLangCode(){
+    return getSessionLang();
+  };
+
+
+
+//-------Private functions, only devs!----------
+
 /**
   * Private
   * Function: Checks if the language exists in the texts file
@@ -118,18 +114,61 @@ function changeLang(language) {
   */  
 function getBrowserLang() {
   
+  //Get the language from the browser
   var userLang = navigator.language || navigator.userLanguage;
 
   // Check if the li for the browsers language is available
   // and set active if it is available
   if(  userLang.split('-')[0]  ) {
-    return ( userLang.split('-')[0].toUpperCase() );
+
+    lang = userLang.split('-')[0].toUpperCase();
+
+    //Checks if the lang of the browser exits in the texts
+    //otherwis sets the first of the file
+    if(langExists(lang)){
+        return lang;
+    }else{
+        console.warn("Hey, you dont have " + lang + " in your file, setting default")
+        return Object.keys(texts)[0];
+    }
+
   }else{
-    //The browser doesn't have a language set, use english 
-    return 'EN';
+    //The browser doesn't have a language set, use the first one 
+    console.warn("Cant get browser lang, setting default");
+    return Object.keys(texts)[0];
   }
 
 };
+
+
+/**
+ * Private
+ * Function: Finds a specific value in the array of texts and get its index
+ * Parameter: Field to find in the texts file, Language to find
+ */
+ function getTextIndex(field,lang) {
+
+    var result;
+    
+    $.each(texts[lang],function(index,value) {
+
+        if($(field).attr("id") in texts[lang][index]){
+            result = index;
+        }
+
+    });
+
+    if(result == null){
+        console.warn("Id " + $(field).attr("id") + " marked as translatable and there is no key in texts file for " + pageLang);
+        return null;
+    }else{
+        return result;
+    }
+
+ };
+
+
+//-------Storage functions , only devs!----------
 
 /**
   * Private
