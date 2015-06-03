@@ -78,7 +78,7 @@ var texts = {
                 "imp1Text": "Importa JQuery, los textos y Langua"
             },
             {
-                "imp2Header": "Importa la clase"
+                "imp2Header": "Agrega la clase"
             },
             {
                 "imp2Text": "Natural como suena, agrega la clase 'translatable' al texto que quieras traducir"
