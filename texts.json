@@ -105,7 +105,7 @@ var texts = {
                 "imp6Header": "Traduce tu pagina!"
             },
             {
-                "imp6Text": "Llama a la funcion changeLang(lang), donde lang es el codigo de lengauje(ES,EN,etc)"
+                "imp6Text": "Llama a la funcion changeLang(lang), donde lang es el codigo de lenguaje(ES,EN,etc)"
             },
             {
                 "imp7Header": "Traducir un solo campo?"
