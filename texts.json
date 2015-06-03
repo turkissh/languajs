@@ -4,7 +4,7 @@ var texts = {
                 "languaDesc": "THE JAVASCRIPT LIBRARY TO EASILY TRANSLATE WEBSITES."
             },
             {
-                "downloadBtn": "Download v1.0"
+                "downloadBtn": "Download v1.2"
             },
             {
                 "implementing": "Implementing? Easy as pie"
@@ -66,7 +66,7 @@ var texts = {
                 "languaDesc" : "LA LIBRERIA JAVASCRIPT PARA TRADUCIR PAGINAS FACILMENTE."
             },
             {
-                "downloadBtn": "Descarga v1.0"
+                "downloadBtn": "Descarga v1.2"
             },
             {
                 "implementing": "Implementarlo? Muy simple"
