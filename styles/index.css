@@ -63,12 +63,20 @@ body{
 
 @media (max-width: 400px){
 
+	.navbar {
+		min-height: 0;
+	}
+
 	.nav > li {
 		display: inline;
 	}
 
 	.nav > li > a {
 		display: inline;
+	}
+
+	.ft-bigger{
+		font-size: 4em;
 	}
 
 	.line-numbers .line-numbers-rows {
