@@ -14,6 +14,12 @@ var texts = {
             },
             {
                 "emailInput": "Enter you email"
+            },
+            {
+                "image1": "images/tellmemore.jpg"
+            },
+            {
+                "image2": "images/trap.jpg"
             }
     ],
     "ES":[
@@ -31,6 +37,12 @@ var texts = {
             },
             {
                 "emailInput": "Agrega tu email"
+            },
+            {
+                "image1": "images/cuentamemas.jpg"
+            },
+            {
+                "image2": "images/trampa.jpg"
             }
     ]
 };

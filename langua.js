@@ -71,26 +71,41 @@ function changeLang(language) {
 	  	//Valid the id is in the dictionary
 		if(index != null){
 
-			//Check if the object has placeholder or not
-            if( $.inArray( $(field).prop("tagName") , ["INPUT","TEXTAREA"] ) >= 0 ){
-                $(field).attr( "placeholder" , texts[lang][index][$(field).attr("id")] );    
+            //Saves the tag to check which attribute edit
+            tag = $(field).prop("tagName");
+
+            //Saves the translated text
+            translate = texts[lang][index][$(field).attr("id")];
+
+    		//Checks the object type
+            if( $.inArray( tag , ["INPUT","TEXTAREA"] ) >= 0 ){
+                //Its a input with placeholder
+                $(field).attr( "placeholder" , translate );    
+            }else if($.inArray( tag , ["IMG","DIV"] ) >= 0){
+                //Its an image, if its a img changes the src, otherwise the background-image
+                if(tag == "IMG") {
+                    $(field).attr( "src" , translate );    
+                }else{
+                    $(field).css('background-image', 'url("' + translate + '")' );
+                }
             }else{
-                $(field).text(texts[lang][index][$(field).attr("id")]);    
+                //General texts only changes the text attribute
+                $(field).text(translate);    
             }
 			
-		}
+        }
 
   	}  	
 
   };
 
- /**
-  * Public
-  * Function: Gets the language code
-  */
-  function getLangCode(){
-    return getSessionLang();
-  };
+    /**
+    * Public
+    * Function: Gets the language code
+    */
+    function getLangCode(){
+        return getSessionLang();
+    };
 
 
 
