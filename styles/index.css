@@ -60,3 +60,26 @@ body{
 .bg-blackie{
 	background-color: #353535;
 }
+
+@media (max-width: 400px){
+
+	.nav > li {
+		display: inline;
+	}
+
+	.nav > li > a {
+		display: inline;
+	}
+
+	.line-numbers .line-numbers-rows {
+		display: none;
+	}
+
+	code[class*="language-"], pre[class*="language-"] {
+		tab-size: 0;
+		text-align: center;
+	}	
+}
+
+
+
