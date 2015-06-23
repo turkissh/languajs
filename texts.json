@@ -4,7 +4,7 @@ var texts = {
                 "languaDesc": "THE JAVASCRIPT LIBRARY TO EASILY TRANSLATE WEBSITES."
             },
             {
-                "downloadBtn": "Download v1.2"
+                "downloadBtn": "Download v1.3"
             },
             {
                 "implementing": "Implementing? Easy as pie"
@@ -52,6 +52,12 @@ var texts = {
                 "imp7Text": "As we said, easy as pie, call changeFieldText with the object to modify and the language code"
             },
             {
+                "imp8Header": "Someone said images?"
+            },
+            {
+                "imp8Text": "If you have text in your images or divs background, just make them translatable and save the url to the image as any other text"
+            },
+            {
                 "doubts": "You still have doubts?"
             },
             {
@@ -66,7 +72,7 @@ var texts = {
                 "languaDesc" : "LA LIBRERIA JAVASCRIPT PARA TRADUCIR PAGINAS FACILMENTE."
             },
             {
-                "downloadBtn": "Descarga v1.2"
+                "downloadBtn": "Descarga v1.3"
             },
             {
                 "implementing": "Implementarlo? Muy simple"
@@ -112,6 +118,12 @@ var texts = {
             },
             {
                 "imp7Text": "Como dijimos, simple, llama changeFieldText con el objeto a modificar y el codigo de lenguaje"
+            },
+            {
+                "imp8Header": "Alguien dijo imagenes?"
+            },
+            {
+                "imp8Text": "Si tienes texto en tus imagenes o fondo de tus divs, simplemente hazlos traducibles y guarda la ruta a la imagen como cualquier otro texto"
             },
             {
                 "doubts": "Todavia tienes dudas?"
